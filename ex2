@@ -1,0 +1,9 @@
+------- qn 1 -------
+ls -a -h -l -t -G
+
+- [x] All files including hidden -a (-A excludes . and ..)
+- [x] Human readable sizes e.g. 45403210 - 45M -h -l together
+- [x] Files ordered by recency -t for modification, -U for creation
+- [x] Colourised output -G
+
+------- qn 2 -------
