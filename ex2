@@ -44,3 +44,5 @@ cat errordump.txt
 ------- qn 4 -------
 
 find . -name "*.html" | zip zipped.zip -@
+
+# -@ takes filename input (files to be zipped) from stdin
