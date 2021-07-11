@@ -40,3 +40,7 @@ do
 done
 cat stdout.txt
 cat errordump.txt
+
+------- qn 4 -------
+
+find . -name "*.html" | zip zipped.zip -@
