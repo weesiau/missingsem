@@ -7,3 +7,36 @@ ls -a -h -l -t -G
 - [x] Colourised output -G
 
 ------- qn 2 -------
+
+function marco {
+	cwd=$(pwd)
+}
+
+function polo {
+	cd $cwd
+}
+
+------- qn 3 -------
+
+#!/usr/bin/env bash
+
+cd /users/weesiau/desktop/wee
+touch stdout.txt
+touch errordump.txt
+
+while [[ $? -eq 0 ]] 
+do
+   n=$(( RANDOM % 100 ))
+   echo "$n" >> stdout.txt
+
+   if [[ n -eq 42 ]]; then
+      errormsg="Something went wrong , the error was using magic numbers"
+      echo $errormsg >> errordump.txt
+      echo "Something went wrong"
+      >&2 echo "The error was using magic numbers"
+      exit 1
+   fi
+   echo "Everything went according to plan"
+done
+cat stdout.txt
+cat errordump.txt
